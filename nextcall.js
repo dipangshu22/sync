@@ -9,7 +9,8 @@ setTimeout(()=>{
 
 }
 
-getdata(1 ,()=>{
-    getdata(22)
-
+getdata(1,()=>{
+    getdata(2,()=>{
+        getdata(3)
+    })
 })
