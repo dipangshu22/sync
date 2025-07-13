@@ -1,10 +1,20 @@
-const URL="https://dog.ceo/api/breeds/image/random"
+const URL="https://official-joke-api.appspot.com/random_joke"
+const text= document.getElementById("text");
+const line=document.getElementById("punchline")
+const btn=document.querySelector("#punch")
 
 const data=async ()=>{
     console.log("getting data....");
     let response= await fetch(URL);
-    console.log(response.status)
+    console.log(response)
+    let output=await response.json()
+    text.innerText=output.setup
+    line.innerText=output.punchline
+   
 }
 
-let output=data()
-console.log(output)
+btn.addEventListener("click",data)
+
+
+// let output=data()
+// console.log(output)
